@@ -1,0 +1,1298 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Wed Oct 15 20:59:39 2025
+| Host         : DESKTOP-A8M6AM2 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file OLED_TOP_timing_summary_routed.rpt -pb OLED_TOP_timing_summary_routed.pb -rpx OLED_TOP_timing_summary_routed.rpx -warn_on_violation
+| Design       : OLED_TOP
+| Device       : 7k325t-ffg676
+| Speed File   : -2  PRODUCTION 1.12 2017-02-17
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (1)
+6. checking no_output_delay (4)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (1)
+------------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (4)
+-------------------------------
+ There are 4 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     17.222        0.000                      0                  226        0.084        0.000                      0                  226        9.600        0.000                       0                   142  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                17.222        0.000                      0                  226        0.084        0.000                      0                  226        9.600        0.000                       0                   142  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack       17.222ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.084ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        9.600ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             17.222ns  (required time - arrival time)
+  Source:                 OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/SPI_data_r_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.617ns  (logic 1.849ns (70.654%)  route 0.768ns (29.346%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.759ns = ( 24.759 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.131ns
+    Clock Pessimism Removal (CPR):    0.350ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.567     1.567 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.540    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.633 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.498     5.131    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB18_X0Y54         RAMB18E1                                     r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[4])
+                                                      1.800     6.931 r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[4]
+                         net (fo=1, routed)           0.497     7.428    OLED_display_inst/douta[4]
+    SLICE_X5Y135         LUT4 (Prop_lut4_I0_O)        0.049     7.477 r  OLED_display_inst/SPI_data_r[4]_i_1__1/O
+                         net (fo=1, routed)           0.271     7.748    OLED_display_inst/SPI_data_r[4]
+    SLICE_X5Y137         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    G22                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.435    21.435 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.854    23.289    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    23.372 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.387    24.759    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X5Y137         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[4]/C
+                         clock pessimism              0.350    25.108    
+                         clock uncertainty           -0.035    25.073    
+    SLICE_X5Y137         FDCE (Setup_fdce_C_D)       -0.103    24.970    OLED_display_inst/SPI_data_r_reg[4]
+  -------------------------------------------------------------------
+                         required time                         24.970    
+                         arrival time                          -7.748    
+  -------------------------------------------------------------------
+                         slack                                 17.222    
+
+Slack (MET) :             17.510ns  (required time - arrival time)
+  Source:                 OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/SPI_data_r_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.466ns  (logic 1.843ns (74.723%)  route 0.623ns (25.277%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.759ns = ( 24.759 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.131ns
+    Clock Pessimism Removal (CPR):    0.350ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.567     1.567 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.540    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.633 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.498     5.131    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB18_X0Y54         RAMB18E1                                     r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[5])
+                                                      1.800     6.931 r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[5]
+                         net (fo=1, routed)           0.623     7.554    OLED_display_inst/douta[5]
+    SLICE_X5Y136         LUT4 (Prop_lut4_I0_O)        0.043     7.597 r  OLED_display_inst/SPI_data_r[5]_i_1__0/O
+                         net (fo=1, routed)           0.000     7.597    OLED_display_inst/SPI_data_r[5]
+    SLICE_X5Y136         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    G22                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.435    21.435 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.854    23.289    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    23.372 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.387    24.759    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X5Y136         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[5]/C
+                         clock pessimism              0.350    25.108    
+                         clock uncertainty           -0.035    25.073    
+    SLICE_X5Y136         FDCE (Setup_fdce_C_D)        0.034    25.107    OLED_display_inst/SPI_data_r_reg[5]
+  -------------------------------------------------------------------
+                         required time                         25.107    
+                         arrival time                          -7.597    
+  -------------------------------------------------------------------
+                         slack                                 17.510    
+
+Slack (MET) :             17.536ns  (required time - arrival time)
+  Source:                 OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/SPI_data_r_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.470ns  (logic 1.843ns (74.620%)  route 0.627ns (25.380%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.758ns = ( 24.758 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.131ns
+    Clock Pessimism Removal (CPR):    0.350ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.567     1.567 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.540    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.633 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.498     5.131    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB18_X0Y54         RAMB18E1                                     r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[1])
+                                                      1.800     6.931 r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[1]
+                         net (fo=1, routed)           0.627     7.558    OLED_display_inst/douta[1]
+    SLICE_X6Y135         LUT5 (Prop_lut5_I0_O)        0.043     7.601 r  OLED_display_inst/SPI_data_r[1]_i_1__1/O
+                         net (fo=1, routed)           0.000     7.601    OLED_display_inst/SPI_data_r[1]
+    SLICE_X6Y135         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    G22                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.435    21.435 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.854    23.289    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    23.372 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.386    24.758    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X6Y135         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[1]/C
+                         clock pessimism              0.350    25.107    
+                         clock uncertainty           -0.035    25.072    
+    SLICE_X6Y135         FDCE (Setup_fdce_C_D)        0.065    25.137    OLED_display_inst/SPI_data_r_reg[1]
+  -------------------------------------------------------------------
+                         required time                         25.137    
+                         arrival time                          -7.601    
+  -------------------------------------------------------------------
+                         slack                                 17.536    
+
+Slack (MET) :             17.546ns  (required time - arrival time)
+  Source:                 OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/SPI_data_r_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.461ns  (logic 1.843ns (74.874%)  route 0.618ns (25.126%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.758ns = ( 24.758 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.131ns
+    Clock Pessimism Removal (CPR):    0.350ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.567     1.567 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.540    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.633 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.498     5.131    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB18_X0Y54         RAMB18E1                                     r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[3])
+                                                      1.800     6.931 r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[3]
+                         net (fo=1, routed)           0.618     7.549    OLED_display_inst/douta[3]
+    SLICE_X6Y135         LUT5 (Prop_lut5_I0_O)        0.043     7.592 r  OLED_display_inst/SPI_data_r[3]_i_1__1/O
+                         net (fo=1, routed)           0.000     7.592    OLED_display_inst/SPI_data_r[3]
+    SLICE_X6Y135         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    G22                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.435    21.435 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.854    23.289    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    23.372 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.386    24.758    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X6Y135         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[3]/C
+                         clock pessimism              0.350    25.107    
+                         clock uncertainty           -0.035    25.072    
+    SLICE_X6Y135         FDCE (Setup_fdce_C_D)        0.066    25.138    OLED_display_inst/SPI_data_r_reg[3]
+  -------------------------------------------------------------------
+                         required time                         25.138    
+                         arrival time                          -7.592    
+  -------------------------------------------------------------------
+                         slack                                 17.546    
+
+Slack (MET) :             17.565ns  (required time - arrival time)
+  Source:                 OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/SPI_data_r_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.435ns  (logic 1.852ns (76.069%)  route 0.583ns (23.931%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.759ns = ( 24.759 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.131ns
+    Clock Pessimism Removal (CPR):    0.350ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.567     1.567 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.540    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.633 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.498     5.131    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB18_X0Y54         RAMB18E1                                     r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[7])
+                                                      1.800     6.931 r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[7]
+                         net (fo=1, routed)           0.583     7.514    OLED_display_inst/douta[7]
+    SLICE_X5Y136         LUT4 (Prop_lut4_I0_O)        0.052     7.566 r  OLED_display_inst/SPI_data_r[7]_i_1__1/O
+                         net (fo=1, routed)           0.000     7.566    OLED_display_inst/SPI_data_r[7]
+    SLICE_X5Y136         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    G22                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.435    21.435 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.854    23.289    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    23.372 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.387    24.759    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X5Y136         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[7]/C
+                         clock pessimism              0.350    25.108    
+                         clock uncertainty           -0.035    25.073    
+    SLICE_X5Y136         FDCE (Setup_fdce_C_D)        0.058    25.131    OLED_display_inst/SPI_data_r_reg[7]
+  -------------------------------------------------------------------
+                         required time                         25.131    
+                         arrival time                          -7.566    
+  -------------------------------------------------------------------
+                         slack                                 17.565    
+
+Slack (MET) :             17.649ns  (required time - arrival time)
+  Source:                 OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/SPI_data_r_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.378ns  (logic 1.847ns (77.677%)  route 0.531ns (22.323%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.758ns = ( 24.758 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.131ns
+    Clock Pessimism Removal (CPR):    0.350ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.567     1.567 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.540    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.633 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.498     5.131    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB18_X0Y54         RAMB18E1                                     r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[2])
+                                                      1.800     6.931 r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[2]
+                         net (fo=1, routed)           0.531     7.462    OLED_display_inst/douta[2]
+    SLICE_X6Y135         LUT5 (Prop_lut5_I0_O)        0.047     7.509 r  OLED_display_inst/SPI_data_r[2]_i_1__1/O
+                         net (fo=1, routed)           0.000     7.509    OLED_display_inst/SPI_data_r[2]
+    SLICE_X6Y135         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    G22                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.435    21.435 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.854    23.289    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    23.372 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.386    24.758    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X6Y135         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[2]/C
+                         clock pessimism              0.350    25.107    
+                         clock uncertainty           -0.035    25.072    
+    SLICE_X6Y135         FDCE (Setup_fdce_C_D)        0.086    25.158    OLED_display_inst/SPI_data_r_reg[2]
+  -------------------------------------------------------------------
+                         required time                         25.158    
+                         arrival time                          -7.509    
+  -------------------------------------------------------------------
+                         slack                                 17.649    
+
+Slack (MET) :             17.672ns  (required time - arrival time)
+  Source:                 OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/SPI_data_r_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.301ns  (logic 1.843ns (80.080%)  route 0.458ns (19.920%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        -0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.703ns = ( 24.703 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.131ns
+    Clock Pessimism Removal (CPR):    0.373ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.567     1.567 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.540    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.633 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.498     5.131    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB18_X0Y54         RAMB18E1                                     r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[0])
+                                                      1.800     6.931 r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[0]
+                         net (fo=1, routed)           0.458     7.389    OLED_display_inst/douta[0]
+    SLICE_X8Y135         LUT5 (Prop_lut5_I0_O)        0.043     7.432 r  OLED_display_inst/SPI_data_r[0]_i_1__1/O
+                         net (fo=1, routed)           0.000     7.432    OLED_display_inst/SPI_data_r[0]
+    SLICE_X8Y135         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    G22                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.435    21.435 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.854    23.289    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    23.372 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.331    24.703    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X8Y135         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[0]/C
+                         clock pessimism              0.373    25.075    
+                         clock uncertainty           -0.035    25.040    
+    SLICE_X8Y135         FDCE (Setup_fdce_C_D)        0.064    25.104    OLED_display_inst/SPI_data_r_reg[0]
+  -------------------------------------------------------------------
+                         required time                         25.104    
+                         arrival time                          -7.432    
+  -------------------------------------------------------------------
+                         slack                                 17.672    
+
+Slack (MET) :             17.790ns  (required time - arrival time)
+  Source:                 OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/SPI_data_r_reg[6]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        2.154ns  (logic 1.843ns (85.544%)  route 0.311ns (14.456%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        -0.055ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.704ns = ( 24.704 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.131ns
+    Clock Pessimism Removal (CPR):    0.373ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.567     1.567 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.540    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.633 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.498     5.131    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB18_X0Y54         RAMB18E1                                     r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[6])
+                                                      1.800     6.931 r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[6]
+                         net (fo=1, routed)           0.311     7.242    OLED_display_inst/douta[6]
+    SLICE_X9Y136         LUT5 (Prop_lut5_I0_O)        0.043     7.285 r  OLED_display_inst/SPI_data_r[6]_i_1__1/O
+                         net (fo=1, routed)           0.000     7.285    OLED_display_inst/SPI_data_r[6]
+    SLICE_X9Y136         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    G22                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.435    21.435 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.854    23.289    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    23.372 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.332    24.704    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X9Y136         FDCE                                         r  OLED_display_inst/SPI_data_r_reg[6]/C
+                         clock pessimism              0.373    25.076    
+                         clock uncertainty           -0.035    25.041    
+    SLICE_X9Y136         FDCE (Setup_fdce_C_D)        0.034    25.075    OLED_display_inst/SPI_data_r_reg[6]
+  -------------------------------------------------------------------
+                         required time                         25.075    
+                         arrival time                          -7.285    
+  -------------------------------------------------------------------
+                         slack                                 17.790    
+
+Slack (MET) :             17.845ns  (required time - arrival time)
+  Source:                 OLED_display_inst/x_temp_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/y_temp_reg[0]/CE
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        1.808ns  (logic 0.526ns (29.098%)  route 1.282ns (70.902%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.045ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.703ns = ( 24.703 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.097ns
+    Clock Pessimism Removal (CPR):    0.350ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.567     1.567 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.540    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.633 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.464     5.097    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X9Y134         FDCE                                         r  OLED_display_inst/x_temp_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y134         FDCE (Prop_fdce_C_Q)         0.204     5.301 r  OLED_display_inst/x_temp_reg[1]/Q
+                         net (fo=8, routed)           0.379     5.680    OLED_display_inst/x_temp_reg_n_0_[1]
+    SLICE_X8Y134         LUT6 (Prop_lut6_I3_O)        0.126     5.806 f  OLED_display_inst/x_temp[7]_i_3__0/O
+                         net (fo=5, routed)           0.438     6.245    OLED_display_inst/x_temp[7]_i_3__0_n_0
+    SLICE_X9Y136         LUT3 (Prop_lut3_I1_O)        0.054     6.299 f  OLED_display_inst/cur_state[2]_i_2/O
+                         net (fo=3, routed)           0.157     6.456    OLED_display_inst/cur_state[2]_i_2_n_0
+    SLICE_X9Y136         LUT4 (Prop_lut4_I0_O)        0.142     6.598 r  OLED_display_inst/y_temp[7]_i_1__0/O
+                         net (fo=8, routed)           0.307     6.905    OLED_display_inst/y_temp0
+    SLICE_X10Y134        FDCE                                         r  OLED_display_inst/y_temp_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    G22                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.435    21.435 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.854    23.289    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    23.372 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.331    24.703    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X10Y134        FDCE                                         r  OLED_display_inst/y_temp_reg[0]/C
+                         clock pessimism              0.350    25.052    
+                         clock uncertainty           -0.035    25.017    
+    SLICE_X10Y134        FDCE (Setup_fdce_C_CE)      -0.267    24.750    OLED_display_inst/y_temp_reg[0]
+  -------------------------------------------------------------------
+                         required time                         24.750    
+                         arrival time                          -6.905    
+  -------------------------------------------------------------------
+                         slack                                 17.845    
+
+Slack (MET) :             17.845ns  (required time - arrival time)
+  Source:                 OLED_display_inst/x_temp_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/y_temp_reg[1]/CE
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        1.808ns  (logic 0.526ns (29.098%)  route 1.282ns (70.902%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.045ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.703ns = ( 24.703 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.097ns
+    Clock Pessimism Removal (CPR):    0.350ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.567     1.567 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.540    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.633 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.464     5.097    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X9Y134         FDCE                                         r  OLED_display_inst/x_temp_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y134         FDCE (Prop_fdce_C_Q)         0.204     5.301 r  OLED_display_inst/x_temp_reg[1]/Q
+                         net (fo=8, routed)           0.379     5.680    OLED_display_inst/x_temp_reg_n_0_[1]
+    SLICE_X8Y134         LUT6 (Prop_lut6_I3_O)        0.126     5.806 f  OLED_display_inst/x_temp[7]_i_3__0/O
+                         net (fo=5, routed)           0.438     6.245    OLED_display_inst/x_temp[7]_i_3__0_n_0
+    SLICE_X9Y136         LUT3 (Prop_lut3_I1_O)        0.054     6.299 f  OLED_display_inst/cur_state[2]_i_2/O
+                         net (fo=3, routed)           0.157     6.456    OLED_display_inst/cur_state[2]_i_2_n_0
+    SLICE_X9Y136         LUT4 (Prop_lut4_I0_O)        0.142     6.598 r  OLED_display_inst/y_temp[7]_i_1__0/O
+                         net (fo=8, routed)           0.307     6.905    OLED_display_inst/y_temp0
+    SLICE_X10Y134        FDCE                                         r  OLED_display_inst/y_temp_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    G22                                               0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         1.435    21.435 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.854    23.289    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    23.372 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         1.331    24.703    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X10Y134        FDCE                                         r  OLED_display_inst/y_temp_reg[1]/C
+                         clock pessimism              0.350    25.052    
+                         clock uncertainty           -0.035    25.017    
+    SLICE_X10Y134        FDCE (Setup_fdce_C_CE)      -0.267    24.750    OLED_display_inst/y_temp_reg[1]
+  -------------------------------------------------------------------
+                         required time                         24.750    
+                         arrival time                          -6.905    
+  -------------------------------------------------------------------
+                         slack                                 17.845    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.084ns  (arrival time - required time)
+  Source:                 OLED_clear_inst/SPI_data_r_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            SPI_user_data_wire_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.182ns  (logic 0.128ns (70.512%)  route 0.054ns (29.488%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.582ns
+    Source Clock Delay      (SCD):    2.094ns
+    Clock Pessimism Removal (CPR):    0.478ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.492     0.492 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.396    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.422 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.672     2.094    OLED_clear_inst/sys_clk_IBUF_BUFG
+    SLICE_X3Y136         FDCE                                         r  OLED_clear_inst/SPI_data_r_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y136         FDCE (Prop_fdce_C_Q)         0.100     2.194 r  OLED_clear_inst/SPI_data_r_reg[4]/Q
+                         net (fo=1, routed)           0.054     2.247    OLED_display_inst/SPI_user_data_wire_reg[7][4]
+    SLICE_X2Y136         LUT6 (Prop_lut6_I2_O)        0.028     2.275 r  OLED_display_inst/SPI_user_data_wire[4]_i_1/O
+                         net (fo=1, routed)           0.000     2.275    OLED_display_inst_n_8
+    SLICE_X2Y136         FDCE                                         r  SPI_user_data_wire_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.688     0.688 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.661    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.691 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.891     2.582    sys_clk_IBUF_BUFG
+    SLICE_X2Y136         FDCE                                         r  SPI_user_data_wire_reg[4]/C
+                         clock pessimism             -0.478     2.105    
+    SLICE_X2Y136         FDCE (Hold_fdce_C_D)         0.087     2.192    SPI_user_data_wire_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -2.192    
+                         arrival time                           2.275    
+  -------------------------------------------------------------------
+                         slack                                  0.084    
+
+Slack (MET) :             0.111ns  (arrival time - required time)
+  Source:                 SPI_DC_in_wire_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_DC_r_reg/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.209ns  (logic 0.128ns (61.382%)  route 0.081ns (38.618%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.582ns
+    Source Clock Delay      (SCD):    2.094ns
+    Clock Pessimism Removal (CPR):    0.478ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.492     0.492 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.396    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.422 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.672     2.094    sys_clk_IBUF_BUFG
+    SLICE_X3Y135         FDCE                                         r  SPI_DC_in_wire_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y135         FDCE (Prop_fdce_C_Q)         0.100     2.194 r  SPI_DC_in_wire_reg/Q
+                         net (fo=1, routed)           0.081     2.274    SPI_DC_wire
+    SLICE_X2Y135         LUT4 (Prop_lut4_I3_O)        0.028     2.302 r  OLED_DC_r_i_1/O
+                         net (fo=1, routed)           0.000     2.302    OLED_DC_r
+    SLICE_X2Y135         FDCE                                         r  OLED_DC_r_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.688     0.688 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.661    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.691 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.891     2.582    sys_clk_IBUF_BUFG
+    SLICE_X2Y135         FDCE                                         r  OLED_DC_r_reg/C
+                         clock pessimism             -0.478     2.105    
+    SLICE_X2Y135         FDCE (Hold_fdce_C_D)         0.087     2.192    OLED_DC_r_reg
+  -------------------------------------------------------------------
+                         required time                         -2.192    
+                         arrival time                           2.302    
+  -------------------------------------------------------------------
+                         slack                                  0.111    
+
+Slack (MET) :             0.128ns  (arrival time - required time)
+  Source:                 SPI_driver_new_inst/data_send_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            SPI_driver_new_inst/data_send_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.199ns  (logic 0.146ns (73.540%)  route 0.053ns (26.459%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.580ns
+    Source Clock Delay      (SCD):    2.093ns
+    Clock Pessimism Removal (CPR):    0.477ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.492     0.492 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.396    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.422 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.671     2.093    SPI_driver_new_inst/sys_clk_IBUF_BUFG
+    SLICE_X2Y133         FDCE                                         r  SPI_driver_new_inst/data_send_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y133         FDCE (Prop_fdce_C_Q)         0.118     2.211 r  SPI_driver_new_inst/data_send_reg[4]/Q
+                         net (fo=1, routed)           0.053     2.263    SPI_driver_new_inst/data_send_reg_n_0_[4]
+    SLICE_X3Y133         LUT4 (Prop_lut4_I0_O)        0.028     2.291 r  SPI_driver_new_inst/data_send[5]_i_1/O
+                         net (fo=1, routed)           0.000     2.291    SPI_driver_new_inst/data_send[5]
+    SLICE_X3Y133         FDCE                                         r  SPI_driver_new_inst/data_send_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.688     0.688 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.661    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.691 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.889     2.580    SPI_driver_new_inst/sys_clk_IBUF_BUFG
+    SLICE_X3Y133         FDCE                                         r  SPI_driver_new_inst/data_send_reg[5]/C
+                         clock pessimism             -0.477     2.104    
+    SLICE_X3Y133         FDCE (Hold_fdce_C_D)         0.060     2.164    SPI_driver_new_inst/data_send_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -2.164    
+                         arrival time                           2.291    
+  -------------------------------------------------------------------
+                         slack                                  0.128    
+
+Slack (MET) :             0.130ns  (arrival time - required time)
+  Source:                 SPI_user_data_wire_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            SPI_driver_new_inst/data_send_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.228ns  (logic 0.128ns (56.068%)  route 0.100ns (43.932%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.580ns
+    Source Clock Delay      (SCD):    2.094ns
+    Clock Pessimism Removal (CPR):    0.476ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.492     0.492 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.396    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.422 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.672     2.094    sys_clk_IBUF_BUFG
+    SLICE_X3Y135         FDCE                                         r  SPI_user_data_wire_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y135         FDCE (Prop_fdce_C_Q)         0.100     2.194 r  SPI_user_data_wire_reg[3]/Q
+                         net (fo=1, routed)           0.100     2.294    SPI_driver_new_inst/SPI_MOSI_r_reg_1[3]
+    SLICE_X2Y133         LUT4 (Prop_lut4_I1_O)        0.028     2.322 r  SPI_driver_new_inst/data_send[3]_i_1/O
+                         net (fo=1, routed)           0.000     2.322    SPI_driver_new_inst/data_send[3]
+    SLICE_X2Y133         FDCE                                         r  SPI_driver_new_inst/data_send_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.688     0.688 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.661    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.691 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.889     2.580    SPI_driver_new_inst/sys_clk_IBUF_BUFG
+    SLICE_X2Y133         FDCE                                         r  SPI_driver_new_inst/data_send_reg[3]/C
+                         clock pessimism             -0.476     2.105    
+    SLICE_X2Y133         FDCE (Hold_fdce_C_D)         0.087     2.192    SPI_driver_new_inst/data_send_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -2.192    
+                         arrival time                           2.322    
+  -------------------------------------------------------------------
+                         slack                                  0.130    
+
+Slack (MET) :             0.137ns  (arrival time - required time)
+  Source:                 OLED_clear_inst/data_en_r_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            SPI_data_en_wire_reg/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.224ns  (logic 0.171ns (76.411%)  route 0.053ns (23.589%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.582ns
+    Source Clock Delay      (SCD):    2.094ns
+    Clock Pessimism Removal (CPR):    0.489ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.492     0.492 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.396    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.422 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.672     2.094    OLED_clear_inst/sys_clk_IBUF_BUFG
+    SLICE_X2Y136         FDCE                                         r  OLED_clear_inst/data_en_r_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y136         FDCE (Prop_fdce_C_Q)         0.107     2.201 r  OLED_clear_inst/data_en_r_reg/Q
+                         net (fo=1, routed)           0.053     2.254    OLED_display_inst/clear_data_en_wire
+    SLICE_X2Y136         LUT6 (Prop_lut6_I2_O)        0.064     2.318 r  OLED_display_inst/SPI_data_en_wire_i_1/O
+                         net (fo=1, routed)           0.000     2.318    SPI_data_en_wire
+    SLICE_X2Y136         FDCE                                         r  SPI_data_en_wire_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.688     0.688 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.661    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.691 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.891     2.582    sys_clk_IBUF_BUFG
+    SLICE_X2Y136         FDCE                                         r  SPI_data_en_wire_reg/C
+                         clock pessimism             -0.489     2.094    
+    SLICE_X2Y136         FDCE (Hold_fdce_C_D)         0.087     2.181    SPI_data_en_wire_reg
+  -------------------------------------------------------------------
+                         required time                         -2.181    
+                         arrival time                           2.318    
+  -------------------------------------------------------------------
+                         slack                                  0.137    
+
+Slack (MET) :             0.138ns  (arrival time - required time)
+  Source:                 OLED_clear_inst/x_temp_reg[5]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_clear_inst/SPI_data_r_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.239ns  (logic 0.128ns (53.666%)  route 0.111ns (46.334%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.585ns
+    Source Clock Delay      (SCD):    2.096ns
+    Clock Pessimism Removal (CPR):    0.476ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.492     0.492 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.396    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.422 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.674     2.096    OLED_clear_inst/sys_clk_IBUF_BUFG
+    SLICE_X0Y139         FDCE                                         r  OLED_clear_inst/x_temp_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y139         FDCE (Prop_fdce_C_Q)         0.100     2.196 r  OLED_clear_inst/x_temp_reg[5]/Q
+                         net (fo=3, routed)           0.111     2.306    OLED_clear_inst/Set_pos_1[1]
+    SLICE_X2Y139         LUT6 (Prop_lut6_I1_O)        0.028     2.334 r  OLED_clear_inst/SPI_data_r[1]_i_1__0/O
+                         net (fo=1, routed)           0.000     2.334    OLED_clear_inst/SPI_data_r[1]
+    SLICE_X2Y139         FDCE                                         r  OLED_clear_inst/SPI_data_r_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.688     0.688 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.661    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.691 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.894     2.585    OLED_clear_inst/sys_clk_IBUF_BUFG
+    SLICE_X2Y139         FDCE                                         r  OLED_clear_inst/SPI_data_r_reg[1]/C
+                         clock pessimism             -0.476     2.110    
+    SLICE_X2Y139         FDCE (Hold_fdce_C_D)         0.087     2.197    OLED_clear_inst/SPI_data_r_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -2.197    
+                         arrival time                           2.334    
+  -------------------------------------------------------------------
+                         slack                                  0.138    
+
+Slack (MET) :             0.150ns  (arrival time - required time)
+  Source:                 OLED_display_inst/x_temp_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[3]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.378ns  (logic 0.100ns (26.430%)  route 0.278ns (73.570%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.046ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.583ns
+    Source Clock Delay      (SCD):    2.061ns
+    Clock Pessimism Removal (CPR):    0.477ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.492     0.492 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.396    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.422 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.639     2.061    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X9Y134         FDCE                                         r  OLED_display_inst/x_temp_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y134         FDCE (Prop_fdce_C_Q)         0.100     2.161 r  OLED_display_inst/x_temp_reg[0]/Q
+                         net (fo=9, routed)           0.278     2.439    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[0]
+    RAMB18_X0Y54         RAMB18E1                                     r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[3]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.688     0.688 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.661    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.691 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.892     2.583    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB18_X0Y54         RAMB18E1                                     r  OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+                         clock pessimism             -0.477     2.106    
+    RAMB18_X0Y54         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[3])
+                                                      0.183     2.289    OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram
+  -------------------------------------------------------------------
+                         required time                         -2.289    
+                         arrival time                           2.439    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+Slack (MET) :             0.151ns  (arrival time - required time)
+  Source:                 OLED_clear_inst/y_temp_reg[6]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_clear_inst/y_temp_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.238ns  (logic 0.171ns (71.912%)  route 0.067ns (28.088%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.585ns
+    Source Clock Delay      (SCD):    2.096ns
+    Clock Pessimism Removal (CPR):    0.490ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.492     0.492 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.396    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.422 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.674     2.096    OLED_clear_inst/sys_clk_IBUF_BUFG
+    SLICE_X2Y138         FDCE                                         r  OLED_clear_inst/y_temp_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y138         FDCE (Prop_fdce_C_Q)         0.107     2.203 r  OLED_clear_inst/y_temp_reg[6]/Q
+                         net (fo=4, routed)           0.067     2.270    OLED_clear_inst/Set_pos_0[6]
+    SLICE_X2Y138         LUT6 (Prop_lut6_I4_O)        0.064     2.334 r  OLED_clear_inst/y_temp[7]_i_2/O
+                         net (fo=1, routed)           0.000     2.334    OLED_clear_inst/y_temp[7]_i_2_n_0
+    SLICE_X2Y138         FDCE                                         r  OLED_clear_inst/y_temp_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.688     0.688 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.661    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.691 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.894     2.585    OLED_clear_inst/sys_clk_IBUF_BUFG
+    SLICE_X2Y138         FDCE                                         r  OLED_clear_inst/y_temp_reg[7]/C
+                         clock pessimism             -0.490     2.096    
+    SLICE_X2Y138         FDCE (Hold_fdce_C_D)         0.087     2.183    OLED_clear_inst/y_temp_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -2.183    
+                         arrival time                           2.334    
+  -------------------------------------------------------------------
+                         slack                                  0.151    
+
+Slack (MET) :             0.157ns  (arrival time - required time)
+  Source:                 OLED_display_inst/y_temp_reg[6]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            OLED_display_inst/y_temp_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.244ns  (logic 0.171ns (70.125%)  route 0.073ns (29.876%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.550ns
+    Source Clock Delay      (SCD):    2.061ns
+    Clock Pessimism Removal (CPR):    0.490ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.492     0.492 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.396    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.422 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.639     2.061    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X10Y135        FDCE                                         r  OLED_display_inst/y_temp_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y135        FDCE (Prop_fdce_C_Q)         0.107     2.168 r  OLED_display_inst/y_temp_reg[6]/Q
+                         net (fo=4, routed)           0.073     2.241    OLED_display_inst/y_temp[6]
+    SLICE_X10Y135        LUT6 (Prop_lut6_I3_O)        0.064     2.305 r  OLED_display_inst/y_temp[7]_i_2__0/O
+                         net (fo=1, routed)           0.000     2.305    OLED_display_inst/y_temp[7]_i_2__0_n_0
+    SLICE_X10Y135        FDCE                                         r  OLED_display_inst/y_temp_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.688     0.688 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.661    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.691 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.859     2.550    OLED_display_inst/sys_clk_IBUF_BUFG
+    SLICE_X10Y135        FDCE                                         r  OLED_display_inst/y_temp_reg[7]/C
+                         clock pessimism             -0.490     2.061    
+    SLICE_X10Y135        FDCE (Hold_fdce_C_D)         0.087     2.148    OLED_display_inst/y_temp_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -2.148    
+                         arrival time                           2.305    
+  -------------------------------------------------------------------
+                         slack                                  0.157    
+
+Slack (MET) :             0.158ns  (arrival time - required time)
+  Source:                 OLED_initial_inst/SPI_data_r_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            SPI_user_data_wire_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.251ns  (logic 0.128ns (51.007%)  route 0.123ns (48.993%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.582ns
+    Source Clock Delay      (SCD):    2.092ns
+    Clock Pessimism Removal (CPR):    0.458ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.492     0.492 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.396    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.422 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.670     2.092    OLED_initial_inst/sys_clk_IBUF_BUFG
+    SLICE_X5Y135         FDRE                                         r  OLED_initial_inst/SPI_data_r_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y135         FDRE (Prop_fdre_C_Q)         0.100     2.192 r  OLED_initial_inst/SPI_data_r_reg[3]/Q
+                         net (fo=1, routed)           0.123     2.315    OLED_display_inst/SPI_user_data_wire_reg[7]_0[3]
+    SLICE_X3Y135         LUT6 (Prop_lut6_I5_O)        0.028     2.343 r  OLED_display_inst/SPI_user_data_wire[3]_i_1/O
+                         net (fo=1, routed)           0.000     2.343    OLED_display_inst_n_9
+    SLICE_X3Y135         FDCE                                         r  SPI_user_data_wire_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    G22                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    G22                  IBUF (Prop_ibuf_I_O)         0.688     0.688 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.661    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.691 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=141, routed)         0.891     2.582    sys_clk_IBUF_BUFG
+    SLICE_X3Y135         FDCE                                         r  SPI_user_data_wire_reg[3]/C
+                         clock pessimism             -0.458     2.125    
+    SLICE_X3Y135         FDCE (Hold_fdce_C_D)         0.060     2.185    SPI_user_data_wire_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -2.185    
+                         arrival time                           2.343    
+  -------------------------------------------------------------------
+                         slack                                  0.158    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { sys_clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            1.839         20.000      18.161     RAMB18_X0Y54   OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            1.839         20.000      18.161     RAMB18_X0Y54   OLED_display_inst/rom_picture_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKBWRCLK
+Min Period        n/a     BUFG/I              n/a            1.409         20.000      18.592     BUFGCTRL_X0Y0  sys_clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C              n/a            0.750         20.000      19.250     SLICE_X6Y136   FSM_onehot_cur_state_reg[1]/C
+Min Period        n/a     FDCE/C              n/a            0.750         20.000      19.250     SLICE_X3Y136   OLED_clear_inst/SPI_data_r_reg[6]/C
+Min Period        n/a     FDCE/C              n/a            0.750         20.000      19.250     SLICE_X3Y136   OLED_clear_inst/SPI_data_r_reg[7]/C
+Min Period        n/a     FDCE/C              n/a            0.750         20.000      19.250     SLICE_X2Y136   OLED_clear_inst/data_en_r_reg/C
+Min Period        n/a     FDCE/C              n/a            0.750         20.000      19.250     SLICE_X1Y139   OLED_clear_inst/x_temp_reg[3]/C
+Min Period        n/a     FDCE/C              n/a            0.750         20.000      19.250     SLICE_X0Y139   OLED_clear_inst/x_temp_reg[6]/C
+Min Period        n/a     FDCE/C              n/a            0.750         20.000      19.250     SLICE_X3Y138   OLED_clear_inst/y_temp_reg[2]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         10.000      9.600      SLICE_X6Y136   FSM_onehot_cur_state_reg[1]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.400         10.000      9.600      SLICE_X3Y136   OLED_clear_inst/SPI_data_r_reg[6]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         10.000      9.600      SLICE_X3Y136   OLED_clear_inst/SPI_data_r_reg[6]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.400         10.000      9.600      SLICE_X3Y136   OLED_clear_inst/SPI_data_r_reg[7]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         10.000      9.600      SLICE_X3Y136   OLED_clear_inst/SPI_data_r_reg[7]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.400         10.000      9.600      SLICE_X2Y136   OLED_clear_inst/data_en_r_reg/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         10.000      9.600      SLICE_X2Y136   OLED_clear_inst/data_en_r_reg/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.400         10.000      9.600      SLICE_X1Y139   OLED_clear_inst/x_temp_reg[3]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         10.000      9.600      SLICE_X1Y139   OLED_clear_inst/x_temp_reg[3]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.400         10.000      9.600      SLICE_X0Y139   OLED_clear_inst/x_temp_reg[6]/C
+High Pulse Width  Slow    FDPE/C              n/a            0.350         10.000      9.650      SLICE_X7Y136   FSM_onehot_cur_state_reg[0]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         10.000      9.650      SLICE_X6Y136   FSM_onehot_cur_state_reg[1]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         10.000      9.650      SLICE_X6Y136   FSM_onehot_cur_state_reg[2]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         10.000      9.650      SLICE_X6Y136   FSM_onehot_cur_state_reg[3]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         10.000      9.650      SLICE_X6Y136   FSM_onehot_cur_state_reg[4]/C
+High Pulse Width  Slow    FDPE/C              n/a            0.350         10.000      9.650      SLICE_X3Y134   OLED_D0_r_reg/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         10.000      9.650      SLICE_X3Y134   OLED_D1_r_reg/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         10.000      9.650      SLICE_X2Y135   OLED_DC_r_reg/C
+High Pulse Width  Slow    FDPE/C              n/a            0.350         10.000      9.650      SLICE_X3Y134   OLED_RST_r_reg/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         10.000      9.650      SLICE_X6Y135   OLED_display_inst/SPI_data_r_reg[1]/C
+
+
+

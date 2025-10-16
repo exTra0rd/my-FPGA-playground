@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../OLED.srcs/sources_1/ip/rom_picture/sim/rom_picture.v" \
+"../../../../OLED.srcs/sources_1/new/OLED_TOP.v" \
+"../../../../OLED.srcs/sources_1/new/OLED_clear.v" \
+"../../../../OLED.srcs/sources_1/new/OLED_initial.v" \
+"../../../../OLED.srcs/sources_1/new/SPI_driver.v" \
+"../../../../OLED.srcs/sources_1/new/SPI_driver_new.v" \
+"../../../../OLED.srcs/sources_1/new/clear_spi.v" \
+"../../../../OLED.srcs/sources_1/new/OLED_display.v" \
+"../../../../OLED.srcs/sim_1/new/driver_tb.v" \
+"../../../../OLED.srcs/sim_1/new/clear_tb.v" \
+"../../../../OLED.srcs/sim_1/new/initial_tb.v" \
+"../../../../OLED.srcs/sim_1/new/OLED_tb.v" \
+"../../../../OLED.srcs/sim_1/new/new_tb.v" \
+"../../../../OLED.srcs/sim_1/new/rom_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

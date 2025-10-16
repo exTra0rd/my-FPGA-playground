@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Oct 15 20:48:42 2025
+# Process ID: 31912
+# Current directory: E:/Projects/Kintex7_Project/OLED/OLED.runs/impl_1
+# Command line: vivado.exe -log OLED_TOP.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source OLED_TOP.tcl -notrace
+# Log file: E:/Projects/Kintex7_Project/OLED/OLED.runs/impl_1/OLED_TOP.vdi
+# Journal file: E:/Projects/Kintex7_Project/OLED/OLED.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source OLED_TOP.tcl -notrace

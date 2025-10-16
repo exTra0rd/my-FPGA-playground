@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Projects/Kintex7_Project/OLED/OLED.sim/sim_1/synth/timing/xsim/clear_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OLED_initial
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Projects/Kintex7_Project/OLED/OLED.srcs/sim_1/new/clear_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clear_tb
