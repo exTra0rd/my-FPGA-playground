@@ -21,26 +21,26 @@
 
 
 module OLED_TOP (
-    input sys_clk,   //ÏµÍ³Ê±ÖÓ 50MHz
-    input sys_rst_n, //ÏµÍ³¸´Î»
+    input sys_clk,   //ÏµÍ³Ê±ï¿½ï¿½ 50MHz
+    input sys_rst_n, //ÏµÍ³ï¿½ï¿½Î»
 
-    output OLED_D0,  // Í¬²½Ê±ÖÓ£ºSPI_SCK
-    output OLED_D1,  // Êý¾ÝÏß£ºMOSI
-    output OLED_RST, // OLEDÇåÆÁÐÅºÅ µÍµçÆ½ÓÐÐ§
-    output OLED_DC   // 1Êý¾Ý 0ÃüÁî
+    output OLED_D0,  // Í¬ï¿½ï¿½Ê±ï¿½Ó£ï¿½SPI_SCK
+    output OLED_D1,  // ï¿½ï¿½ï¿½ï¿½ï¿½ß£ï¿½MOSI
+    output OLED_RST, // OLEDï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½ ï¿½Íµï¿½Æ½ï¿½ï¿½Ð§
+    output OLED_DC   // 1ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½
    );
 
-    // ×´Ì¬»ú±àÂë
+    // ×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     localparam RESET   = 3'd0;
     localparam INITIAL = 3'd1;
     localparam CLEAR   = 3'd2;
     localparam DISPLAY = 3'd3;
     localparam IDLE    = 3'd4;
 
-    // ¸´Î»Ê±¼ä
+    // ï¿½ï¿½Î»Ê±ï¿½ï¿½
     localparam rst_cnt_num = 'd5_000_000; //5_000_000
 
-    reg [23:0] rst_cnt; // ¸´Î»¼ÆÊ±¼ÆÊýÆ÷
+    reg [23:0] rst_cnt; // ï¿½ï¿½Î»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     reg [2:0] cur_state;
     reg [2:0] nxt_state;
@@ -55,7 +55,7 @@ module OLED_TOP (
     assign OLED_RST = OLED_RST_r;
     assign OLED_DC  = OLED_DC_r;
 
-    // initial Ä£¿éÀý»¯Á¬Ïß
+    // initial Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     wire       initial_DC_wire;
     wire       initial_done_wire;
     wire       initial_SPI_en_wire;
@@ -64,7 +64,7 @@ module OLED_TOP (
     
     reg        initial_en_wire;
 
-    // SPI Çý¶¯Ä£¿éÀý»¯Á¬Ïß
+    // SPI ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     reg       SPI_en_wire;
     reg       SPI_data_en_wire;
     reg [7:0] SPI_user_data_wire;
@@ -75,7 +75,7 @@ module OLED_TOP (
     wire SPI_DC_wire;
     wire SPI_DONE_wire;
 
-    // clear Ä£¿éÀý»¯Á¬Ïß
+    // clear Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     reg clear_en_wire;
 
     wire       clear_DC_wire;
@@ -84,7 +84,7 @@ module OLED_TOP (
     wire       clear_data_en_wire;
     wire       clear_SPI_en_wire;
 
-    // display Ä£¿éÀý»¯Á¬Ïß
+    // display Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     reg display_en_wire;
 
     wire       display_DC_wire;
@@ -93,66 +93,66 @@ module OLED_TOP (
     wire       display_SPI_en_wire;
     wire       display_done_wire;
 
-    // Ä£¿éÀý»¯
+    // Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    // OLED ³õÊ¼»¯Ä£¿é
+    // OLED ï¿½ï¿½Ê¼ï¿½ï¿½Ä£ï¿½ï¿½
     OLED_initial OLED_initial_inst (
-        .clk      (sys_clk),       // Ê±ÖÓÐÅºÅ
-        .rst_n    (sys_rst_n),     // ¸´Î»ÐÅºÅ
-        .SPI_BUSY (SPI_DONE_wire), // SPIÍê³ÉÐÅºÅ
-        .en       (initial_en_wire),    // ³õÊ¼»¯Ê¹ÄÜ
+        .clk      (sys_clk),       // Ê±ï¿½ï¿½ï¿½Åºï¿½
+        .rst_n    (sys_rst_n),     // ï¿½ï¿½Î»ï¿½Åºï¿½
+        .SPI_BUSY (SPI_DONE_wire), // SPIï¿½ï¿½ï¿½ï¿½Åºï¿½
+        .en       (initial_en_wire),    // ï¿½ï¿½Ê¼ï¿½ï¿½Ê¹ï¿½ï¿½
 
-        .DC           (initial_DC_wire),       // 1 Êý¾Ý 0 ÃüÁî
-        .initial_done (initial_done_wire),     // ³õÊ¼»¯Íê³ÉÐÅºÅ
-        .SPI_en       (initial_SPI_en_wire),   // SPI Ê¹ÄÜ
-        .SPI_data     (initial_SPI_data_wire), // SPI ·¢ËÍµÄÊý¾Ý
+        .DC           (initial_DC_wire),       // 1 ï¿½ï¿½ï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½
+        .initial_done (initial_done_wire),     // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+        .SPI_en       (initial_SPI_en_wire),   // SPI Ê¹ï¿½ï¿½
+        .SPI_data     (initial_SPI_data_wire), // SPI ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½ï¿½
         .data_en      (initial_data_en_wire)
     );
 
-    // SPI Çý¶¯Ä£¿é
+    // SPI ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
     SPI_driver_new SPI_driver_new_inst (
-        .clk       (sys_clk),            // ÏµÍ³Ê±ÖÓ
-        .rst_n     (sys_rst_n),          // ¸´Î»ÐÅºÅ
-        .en        (SPI_en_wire),        // Ê¹ÄÜÐÅºÅ
-        .data_en   (SPI_data_en_wire),   // Êý¾ÝÊ¹ÄÜ
-        .user_data (SPI_user_data_wire), // ´ý·¢ËÍÊý¾Ý
+        .clk       (sys_clk),            // ÏµÍ³Ê±ï¿½ï¿½
+        .rst_n     (sys_rst_n),          // ï¿½ï¿½Î»ï¿½Åºï¿½
+        .en        (SPI_en_wire),        // Ê¹ï¿½ï¿½ï¿½Åºï¿½
+        .data_en   (SPI_data_en_wire),   // ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
+        .user_data (SPI_user_data_wire), // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         .DC_in     (SPI_DC_in_wire),
 
-        .SPI_MOSI (SPI_MOSI_wire), // SPIÊý¾ÝÏß
-        .SPI_SCK  (SPI_SCK_wire),  // SPIÊ±ÖÓÏß
-        .SPI_DC   (SPI_DC_wire),   // ÃüÁî»òÊý¾Ý
-        .SPI_DONE (SPI_DONE_wire)  // SPI Ò»Ö¡´«ËÍÍê³ÉÐÅºÅ
+        .SPI_MOSI (SPI_MOSI_wire), // SPIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .SPI_SCK  (SPI_SCK_wire),  // SPIÊ±ï¿½ï¿½ï¿½ï¿½
+        .SPI_DC   (SPI_DC_wire),   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .SPI_DONE (SPI_DONE_wire)  // SPI Ò»Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
     );
 
-    // clear Ä£¿é
+    // clear Ä£ï¿½ï¿½
     OLED_clear OLED_clear_inst (
         .clk      (sys_clk),
         .rst_n    (sys_rst_n),
-        .clear_en (clear_en_wire), //ÇåÁãÊ¹ÄÜÐÅºÅ
-        .SPI_done (SPI_DONE_wire), //SPI·¢ËÍÍê³ÉÍ¨Öª
+        .clear_en (clear_en_wire), //ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Åºï¿½
+        .SPI_done (SPI_DONE_wire), //SPIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨Öª
 
-        .DC         (clear_DC_wire),       // 1Êý¾Ý 0ÃüÁî
-        .clear_done (clear_done_wire),     // ÇåÁãÍê³ÉÐÅºÅ
-        .SPI_data   (clear_SPI_data_wire), // SPI·¢ËÍÊý¾Ý
-        .data_en    (clear_data_en_wire),  // Êý¾ÝÊ¹ÄÜ
+        .DC         (clear_DC_wire),       // 1ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½
+        .clear_done (clear_done_wire),     // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+        .SPI_data   (clear_SPI_data_wire), // SPIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .data_en    (clear_data_en_wire),  // ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
         .SPI_en     (clear_SPI_en_wire)
     );
 
-    // display Ä£¿é
+    // display Ä£ï¿½ï¿½
     OLED_display OLED_display_inst (
             .clk          (sys_clk),
             .rst_n        (sys_rst_n),
             .display_en   (display_en_wire),
-            .SPI_done     (SPI_DONE_wire),  //SPI·¢ËÍÍê³ÉÍ¨Öª
+            .SPI_done     (SPI_DONE_wire),  //SPIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨Öª
 
-            .DC           (display_DC_wire),       // 1Êý¾Ý 0ÃüÁî
-            .SPI_data     (display_SPI_data_wire), // SPI·¢ËÍÊý¾Ý
-            .data_en      (display_data_en_wire),  // Êý¾ÝÊ¹ÄÜ
+            .DC           (display_DC_wire),       // 1ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½
+            .SPI_data     (display_SPI_data_wire), // SPIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            .data_en      (display_data_en_wire),  // ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
             .SPI_en       (display_SPI_en_wire),
             .display_done (display_done_wire)
     );
 
-    // ×´Ì¬×ªÒÆ
+    // ×´Ì¬×ªï¿½ï¿½
     always @(posedge sys_clk or negedge sys_rst_n)
     begin
         if (!sys_rst_n)
@@ -165,7 +165,7 @@ module OLED_TOP (
         end
     end
 
-    // ¼ÆËã´ÎÌ¬
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Ì¬
     always @(*)
     begin
         nxt_state = cur_state;
@@ -215,7 +215,7 @@ module OLED_TOP (
         endcase
     end
 
-    // ¼ÆËãÊä³ö
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     always @(posedge sys_clk or negedge sys_rst_n)
     begin
         if (!sys_rst_n)
@@ -340,7 +340,7 @@ module OLED_TOP (
         end
     end
 
-    // ¸´Î»¼ÆÊ±
+    // ï¿½ï¿½Î»ï¿½ï¿½Ê±
     always @(posedge sys_clk or negedge sys_rst_n)
     begin
         if (!sys_rst_n)
@@ -360,82 +360,3 @@ module OLED_TOP (
     end
     
 endmodule
-
-//    localparam rst_cnt_num = 'd5_000_000;
-
-//     wire [7:0] SPI_data_wire;
-//     wire       SPI_en_wire;
-//     wire       SPI_DC_wire;
-//     wire       SPI_BUSY_wire;
-    
-//     wire data_en;
-
-//     reg        OLED_RST_r;
-//     reg [23:0] rst_cnt;
-//     reg        OLED_en;
-
-//     assign OLED_RST = OLED_RST_r;
-
-//     always @(posedge sys_clk or negedge sys_rst_n)
-//     begin
-//         if (!sys_rst_n)
-//         begin
-//             OLED_RST_r <= 1'b1;
-//             OLED_en    <= 1'b0;
-//         end
-//         else
-//         begin
-//             if (rst_cnt < rst_cnt_num)
-//             begin
-//                 OLED_RST_r <= 1'b0;
-//                 OLED_en    <= 1'b0;
-//             end
-//             else
-//             begin
-//                 OLED_RST_r <= 1'b1;
-//                 OLED_en    <= 1'b1;
-//             end
-//         end
-//     end
-
-//     always @(posedge sys_clk or negedge sys_rst_n)
-//     begin
-//         if (!sys_rst_n)
-//         begin
-//             rst_cnt = 'd0;
-//         end
-//         else
-//         begin
-//             if (rst_cnt < rst_cnt_num)
-//             begin
-//                 rst_cnt = rst_cnt + 1'd1;
-//             end
-//         end
-//     end
-
-//     OLED_initial OLED_initial_inst (
-//         .clk      (sys_clk),
-//         .rst_n    (sys_rst_n),
-//         .SPI_BUSY (SPI_BUSY_wire),
-//         .en       (OLED_en),
-
-//         .DC           (SPI_DC_wire),
-//         .initial_done (),
-//         .SPI_en       (SPI_en_wire),
-//         .SPI_data     (SPI_data_wire),
-//         .data_en      (data_en)
-//     );
-
-//     SPI_driver_new SPI_driver_inst (
-//         .clk       (sys_clk),
-//         .rst_n     (sys_rst_n),
-//         .en        (SPI_en_wire),
-//         .data_en   (data_en),
-//         .user_data (SPI_data_wire),
-//         .DC_in     (SPI_DC_wire),
-
-//         .SPI_MOSI (OLED_D1),
-//         .SPI_SCK  (OLED_D0),
-//         .SPI_DC   (OLED_DC),
-//         .SPI_DONE (SPI_BUSY_wire)
-//     );
