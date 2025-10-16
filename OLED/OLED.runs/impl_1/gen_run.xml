@@ -16,9 +16,12 @@
   <File Type="BITSTR-BMM" Name="OLED_TOP_bd.bmm"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="OLED_TOP_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MMI" Name="OLED_TOP.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="OLED_TOP_methodology_drc_routed.pb"/>
   <File Type="BITSTR-SYSDEF" Name="OLED_TOP.sysdef"/>
+  <File Type="ROUTE-DRC-RPX" Name="OLED_TOP_drc_routed.rpx"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="OLED_TOP.ltx"/>
+  <File Type="RCFI_FILE" Name="OLED_TOP.rcfi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="OLED_TOP_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="OLED_TOP.hwdef"/>
@@ -48,11 +51,8 @@
   <File Type="PHYSOPT-DCP" Name="OLED_TOP_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="OLED_TOP_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="OLED_TOP_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="OLED_TOP_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="OLED_TOP_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="OLED_TOP_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="OLED_TOP.pdi"/>
-  <File Type="RCFI_FILE" Name="OLED_TOP.rcfi"/>
   <File Type="CFI_FILE" Name="OLED_TOP.cfi"/>
   <File Type="RNPI_FILE" Name="OLED_TOP.rnpi"/>
   <File Type="NPI_FILE" Name="OLED_TOP.npi"/>
