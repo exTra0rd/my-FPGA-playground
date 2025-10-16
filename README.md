@@ -1,3 +1,2 @@
 # my-FPGA-playground
-​​This is a playground all about FPGA.​
-hello
+​​This is a "hello" demo
